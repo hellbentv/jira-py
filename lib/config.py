@@ -4,7 +4,7 @@ import os
 import getpass
 
 class Configuration(object):
-    def __init__(self, filename='.jira.cfg'):
+    def __init__(self, filename='~/.jira.cfg'):
         self.parser = RawConfigParser()
         filepath = os.path.expanduser(filename)
         if os.path.exists(filepath): self.parser.read(filepath)
